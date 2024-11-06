@@ -14,19 +14,26 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  flutter_native_splash: ^2.0.5
 
 flutter:
   uses-material-design: true
   assets:
-  - assets/images/
-  - assets/icons/
-  - assets/fonts/
-
+    - assets/images/logo.png
+    - assets/icons/
+    - assets/fonts/
+    
 dependencies:
   flutter:
     sdk: flutter
   permission_handler: ^10.2.0
   image_picker: ^0.8.5+3
+
+flutter_native_splash:
+  color: "#ffffff" # Color de fondo de la splash screen
+  image: assets/images/logo.png 
+  android: true
+  ios: true
 
 
 
