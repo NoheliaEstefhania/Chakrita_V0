@@ -15,7 +15,10 @@ class UploadPhotoScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                // Lógica para tomar foto
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TakePhotoScreen()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(250, 220), // Tamaño fijo para que ambos botones tengan la misma medida
