@@ -13,71 +13,47 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Mi Huerto NASA'),
         centerTitle: true,
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              'Cuidamos tu huerto',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Lógica para tomar foto
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PermissionsScreen()),
+                );
               },
-              style: ElevatedButton.styleFrom(
-                fixedSize: Size(250, 220), // Tamaño fijo para que ambos botones tengan la misma medida
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12), // Bordes menos redondeados
-                ),
-                padding: EdgeInsets.all(12),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text(
-                    'Tomar una Foto',
-                    textAlign: TextAlign.center, // Centra el texto
-                    style: TextStyle(fontSize: 26), // Cambia el tamaño del texto
-                  ),
-                  const SizedBox(height: 8),
-                  Image.asset(
-                    'assets/icons/camera.png', // Ruta de la imagen
-                    width: 120, 
-                    height: 120,
-                  ),
-                ],
-              ),
+              child: const Text('Tomar una Foto'),
             ),
-            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                // Lógica para seleccionar de la galería
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UploadPhotoScreen()),
+                );
               },
-              style: ElevatedButton.styleFrom(
-                fixedSize: Size(250, 220), // Tamaño fijo igual que el botón anterior
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                padding: EdgeInsets.all(12),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text(
-                    'Go to gallery',
-                    style: TextStyle(fontSize: 26),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Image.asset(
-                    'assets/icons/gallery.png',
-                    width: 120,
-                    height: 120,
-                  ),
-                ],
-              ),
+              child: const Text('Chat con Asistente'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AlertsScreen()),
+                );
+              },
+              child: const Text('Activar Alertas'),
+            ),
+
           ],
         ),
       ),
-
     );
   }
 }
