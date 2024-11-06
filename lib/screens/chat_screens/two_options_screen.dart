@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'take_photo_screen.dart';
 
-class UploadPhotoScreen extends StatelessWidget {
+class TwoOptionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

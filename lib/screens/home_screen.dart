@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'permissions_screen.dart';
 import 'alerts_screen.dart';
-import 'chat_screens/upload_photo_screen.dart';
+import 'chat_screens/two_options_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UploadPhotoScreen()),
+                  MaterialPageRoute(builder: (context) => TwoOptionsScreen()),
                 );
               },
               child: const Text('Chat con Asistente'),
