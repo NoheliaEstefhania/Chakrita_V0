@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'permissions_screen.dart';
-import 'upload_photo_screen.dart';
 import 'alerts_screen.dart';
-import 'chat_screen.dart';
+import 'chat_screens/upload_photo_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -28,19 +27,19 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UploadPhotoScreen()),
+                  MaterialPageRoute(builder: (context) => PermissionsScreen()),
                 );
               },
-              child: const Text('Subir una Foto'),
+              child: const Text('Tomar una Foto'),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PermissionsScreen()),
+                  MaterialPageRoute(builder: (context) => UploadPhotoScreen()),
                 );
               },
-              child: const Text('Tomar una Foto'),
+              child: const Text('Chat con Asistente'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -51,15 +50,7 @@ class HomeScreen extends StatelessWidget {
               },
               child: const Text('Activar Alertas'),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ChatScreen()),
-                );
-              },
-              child: const Text('Chat con Asistente'),
-            ),
+
           ],
         ),
       ),
