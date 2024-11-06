@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TakePhotoScreen extends StatelessWidget {
+class UploadContextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Recording'),
+        title: Text('Sent recording'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -13,11 +13,14 @@ class TakePhotoScreen extends StatelessWidget {
           // Cuadrado en la parte superior
           Container(
             width: 400.0, // Tamaño del cuadrado
-            height: 600.0,
+            height: 500.0,
             color: Colors.grey.withOpacity(0.5), // Color del cuadrado
-            margin: EdgeInsets.all(20.0) // Espacio superior opcional
+            margin: EdgeInsets.all(20.0), // Espacio superior opcional
+            child: Image.asset(
+              'assets/icons/gallery.png', 
+              fit: BoxFit.cover, // Ajusta cómo la imagen llena el contenedor
+            ),
           ),
-          
           // Botón en la parte inferior
           Padding(
             padding: const EdgeInsets.only(bottom: 20.0), // Espacio inferior

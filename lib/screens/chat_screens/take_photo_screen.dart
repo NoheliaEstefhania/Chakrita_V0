@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/chat_screens/upload_context_screen.dart';
 
 class TakePhotoScreen extends StatelessWidget {
   @override
@@ -23,7 +24,10 @@ class TakePhotoScreen extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 20.0), // Espacio inferior
             child: ElevatedButton(
               onPressed: () {
-                // Lógica para seleccionar de la galería
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UploadContextScreen()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 shape: CircleBorder(), // Hace el botón circular
