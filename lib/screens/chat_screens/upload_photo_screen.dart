@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'take_photo_screen.dart';
 
 class UploadPhotoScreen extends StatelessWidget {
   @override
@@ -14,6 +15,10 @@ class UploadPhotoScreen extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: () {
                 // Lógica para tomar foto
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TakePhotoScreen()),
+                );
               },
               icon: Icon(Icons.camera_alt),
               label: Text('Tomar una Foto'),
