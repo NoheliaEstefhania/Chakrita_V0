@@ -23,4 +23,11 @@ dependencies:
     sdk: flutter
   permission_handler: ^10.2.0
   image_picker: ^0.8.5+3
+  
+flutter:
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+
 
