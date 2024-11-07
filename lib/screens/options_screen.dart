@@ -8,7 +8,18 @@ class OptionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mi Huerto NASA'),
+        //title: const Text('Mi Huerto NASA'),
+        title: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/images/logo.png', // Cambia a la ruta de tu logo
+              height: 30, // Ajusta el tamaño según tus necesidades
+            ),
+            const SizedBox(height: 4), // Espacio entre el logo y el texto
+            const Text('Mi Huerto NASA'),
+          ],
+        ),
         centerTitle: true,
       ),
       body: Center(
@@ -17,15 +28,17 @@ class OptionsScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                  Navigator.push(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TakePhotoScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(250, 220), // Tamaño fijo para que ambos botones tengan la misma medida
+                fixedSize: Size(250,
+                    220), // Tamaño fijo para que ambos botones tengan la misma medida
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12), // Bordes menos redondeados
+                  borderRadius:
+                      BorderRadius.circular(12), // Bordes menos redondeados
                 ),
                 padding: EdgeInsets.all(12),
               ),
@@ -35,7 +48,7 @@ class OptionsScreen extends StatelessWidget {
                   const SizedBox(height: 8),
                   Image.asset(
                     'assets/icons/camera.png', // Ruta de la imagen
-                    width: 120, 
+                    width: 120,
                     height: 120,
                   ),
                 ],
@@ -44,14 +57,14 @@ class OptionsScreen extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                // Lógica para seleccionar 
-                  Navigator.push(
+                // Lógica para seleccionar
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TwoOptionsScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(250, 220), 
+                fixedSize: Size(250, 220),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -72,14 +85,14 @@ class OptionsScreen extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                // Lógica para seleccionar 
-                  Navigator.push(
+                // Lógica para seleccionar
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => AlertsScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(250, 220), 
+                fixedSize: Size(250, 220),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -100,7 +113,6 @@ class OptionsScreen extends StatelessWidget {
           ],
         ),
       ),
-
     );
   }
 }

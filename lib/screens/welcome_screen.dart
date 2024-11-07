@@ -7,14 +7,15 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('We take care of your chakra'),
-        backgroundColor: Colors.green,
+        //backgroundColor: Colors.green,
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'We help farmers make smarter decisions...',
+              'We help farmers make smarter decisions, optimize their resources, and most importantly, protect their production against climate challenges.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 18),
             ),
@@ -27,8 +28,8 @@ class WelcomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => PermissionScreen()),
                 );
               },
-              child: Image.asset('assets/nasa_sign.png',
-                  width: 150), // Reemplaza con tu imagen
+              child: Image.asset('assets/images/carter_farm.png',
+                  width: 450), // Reemplaza con tu imagen
             ),
           ],
         ),
