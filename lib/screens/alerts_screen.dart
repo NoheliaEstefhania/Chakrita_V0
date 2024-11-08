@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/CustomAppBar.dart';
 
 class AlertsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Alertas Climáticas'),
-      ),
+      appBar: const CustomAppBar(titleText: 'Alerts'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/options_screen.dart';
+import 'package:flutter_application_1/widgets/CustomAppBar.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class PermissionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Permissions'),
-        centerTitle: true,
-      ),
+      appBar: const CustomAppBar(titleText: 'Permitions'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

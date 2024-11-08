@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/chat_screens/chat_screen_conversation.dart';
+import 'package:flutter_application_1/widgets/CustomAppBar.dart';
 
 class UploadContextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Sent recording'),
-      ),
+      appBar: const CustomAppBar(titleText: 'Sent recording'),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -18,7 +17,7 @@ class UploadContextScreen extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5), // Color del cuadrado
             margin: EdgeInsets.all(20.0), // Espacio superior opcional
             child: Image.asset(
-              'assets/icons/gallery.png',
+              'assets/images/photo.png',
               fit: BoxFit.cover, // Ajusta cómo la imagen llena el contenedor
             ),
           ),

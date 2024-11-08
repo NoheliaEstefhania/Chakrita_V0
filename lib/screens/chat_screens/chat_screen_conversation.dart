@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/CustomAppBar.dart';
 
 class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Asistente Chat'),
-      ),
+      appBar: const CustomAppBar(titleText: "Chat Screen"),
       body: Column(
         children: [
           Expanded(

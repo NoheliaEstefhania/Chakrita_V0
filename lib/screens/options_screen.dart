@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/alerts_screen.dart';
+import 'package:flutter_application_1/widgets/CustomAppBar.dart';
 import 'chat_screens/two_options_screen.dart';
 import 'chat_screens/take_photo_screen.dart';
 
@@ -7,27 +8,7 @@ class OptionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 120,
-        title: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              'assets/images/logo.png', 
-              height: 30, // Ajusta el tamaño según tus necesidades
-            ),
-            const SizedBox(height: 20), // Espacio entre el logo y el texto
-            const Text('Mi Huerto NASA',        
-              style: TextStyle(
-                color: Colors.green, 
-                fontSize: 25, 
-                fontWeight: FontWeight.bold, 
-              ),
-            ),
-          ],
-        ),
-        centerTitle: true,
-      ),
+      appBar: const CustomAppBar(titleText: 'Mi Huerto NASA'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

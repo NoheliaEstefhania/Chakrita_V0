@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/permission_screen.dart';
+import 'package:flutter_application_1/widgets/CustomAppBar.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 120,
-        title: Text('We take care of your chakra', 
-          style: TextStyle(
-            color: Colors.green, 
-            fontSize: 25, 
-            fontWeight: FontWeight.bold, 
-          ),
-        ),
-        //backgroundColor: Colors.green,
-        centerTitle: true,
-      ),
+      appBar: const CustomAppBar(titleText: 'We take care of your chakra'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
