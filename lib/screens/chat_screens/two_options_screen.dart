@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/CustomAppBar.dart';
 import 'take_photo_screen.dart';
 
 class TwoOptionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Mi Huerto NASA'),
-        centerTitle: true,
-      ),
+      appBar: const CustomAppBar(titleText: 'Mi Huerto NASA'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               onPressed: () {
-                  Navigator.push(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TakePhotoScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(250, 220), // Tamaño fijo para que ambos botones tengan la misma medida
+                fixedSize: Size(250,
+                    220), // Tamaño fijo para que ambos botones tengan la misma medida
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12), // Bordes menos redondeados
+                  borderRadius:
+                      BorderRadius.circular(12), // Bordes menos redondeados
                 ),
                 padding: EdgeInsets.all(12),
               ),
@@ -33,12 +33,13 @@ class TwoOptionsScreen extends StatelessWidget {
                   const Text(
                     'Take a picture',
                     textAlign: TextAlign.center, // Centra el texto
-                    style: TextStyle(fontSize: 26), // Cambia el tamaño del texto
+                    style:
+                        TextStyle(fontSize: 26), // Cambia el tamaño del texto
                   ),
                   const SizedBox(height: 8),
                   Image.asset(
                     'assets/icons/camera.png', // Ruta de la imagen
-                    width: 120, 
+                    width: 120,
                     height: 120,
                   ),
                 ],
@@ -50,7 +51,7 @@ class TwoOptionsScreen extends StatelessWidget {
                 // Lógica para seleccionar de la galería
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(250, 220), 
+                fixedSize: Size(250, 220),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -76,7 +77,6 @@ class TwoOptionsScreen extends StatelessWidget {
           ],
         ),
       ),
-
     );
   }
 }

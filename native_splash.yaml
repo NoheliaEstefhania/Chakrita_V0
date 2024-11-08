@@ -3,5 +3,7 @@ flutter_native_splash:
   ios: true
   web: false
 
-  color: "#d4e4ed"
+  color: "#ffffff"
   image: "assets/images/logo.png"
+  android_image_size: "contain"  # Ajuste de la imagen en Android
+  ios_image_size: "contain"  # Ajuste de la imagen en iOS
