@@ -6,7 +6,14 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('We take care of your chakra'),
+        toolbarHeight: 120,
+        title: Text('We take care of your chakra', 
+          style: TextStyle(
+            color: Colors.green, 
+            fontSize: 25, 
+            fontWeight: FontWeight.bold, 
+          ),
+        ),
         //backgroundColor: Colors.green,
         centerTitle: true,
       ),

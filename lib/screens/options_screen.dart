@@ -8,16 +8,22 @@ class OptionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //title: const Text('Mi Huerto NASA'),
+        toolbarHeight: 120,
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              'assets/images/logo.png', // Cambia a la ruta de tu logo
+              'assets/images/logo.png', 
               height: 30, // Ajusta el tamaño según tus necesidades
             ),
-            const SizedBox(height: 4), // Espacio entre el logo y el texto
-            const Text('Mi Huerto NASA'),
+            const SizedBox(height: 20), // Espacio entre el logo y el texto
+            const Text('Mi Huerto NASA',        
+              style: TextStyle(
+                color: Colors.green, 
+                fontSize: 25, 
+                fontWeight: FontWeight.bold, 
+              ),
+            ),
           ],
         ),
         centerTitle: true,

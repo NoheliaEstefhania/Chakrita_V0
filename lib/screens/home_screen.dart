@@ -8,9 +8,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
+      
       appBar: AppBar(
-        title: const Text('Mi Huerto NASA'),
+        toolbarHeight: 120,
+        title: const Text('Mi Huerto NASA', 
+          style: TextStyle(
+            color: Colors.green, 
+            fontSize: 25, 
+            fontWeight: FontWeight.bold, 
+            ),
+          ),
         centerTitle: true,
       ),
       body: Padding(
